@@ -18,8 +18,8 @@
 #define BOTTOMLEFTAXISY A5
 #define UPPERLEFTAXISX A6
 #define UPPERLEFTAXISY A7
-#define ARPWM 44
-#define ALPWM 12
+#define ARPWM 12
+#define ALPWM 44
 #define BRPWM 8
 #define BLPWM 9
 #define CRPWM 7
@@ -241,6 +241,7 @@ void printJoyValues() {
 void loop() {
   if (millis() - lastRead > 10) {
     readJoyValues();
+    //Serial.println(eStop);
     //readJoyValuesRadio();
     //printJoyValues();
     lastRead = millis();
